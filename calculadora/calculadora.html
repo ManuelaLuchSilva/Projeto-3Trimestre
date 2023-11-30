@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <!-- CALCULATOR -->
+    <div class="calculator">
+        <!-- DISPLAY -->
+        <div class="display">
+            <input id="resultado" placeholder="0" disabled>
+            <h2 id="history"></h2>
+        </div>
+
+        <!-- <BUTTONS -->
+        <div class="row">
+            <button class="button purple-text" onclick="limpar()">AC</button>
+            <div></div>
+            <div></div>
+            <button class="button gray" onclick="add_operador('/')">/</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(7)">7</button>
+            <button class="button" onclick="add_numero(8)">8</button>
+            <button class="button" onclick="add_numero(9)">9</button>
+            <button class="button gray" onclick="add_operador('*')">*</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(4)">4</button>
+            <button class="button" onclick="add_numero(5)">5</button>
+            <button class="button" onclick="add_numero(6)">6</button>
+            <button class="button gray" onclick="add_operador('-')">-</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_numero(1)">1</button>
+            <button class="button" onclick="add_numero(2)">2</button>
+            <button class="button" onclick="add_numero(3)">3</button>
+            <button class="button gray" onclick="add_operador('+')">+</button>
+        </div>
+
+        <div class="row">
+            <div></div>
+            <button class="button" onclick="add_numero(0)">0</button>
+            <button class="button" onclick="add_numero('.')">.</button>
+            <button class="button purple" onclick="total()">=</button>
+        </div>
+        <!-- BUTTONS/> -->
+        <!-- <h5>
+            <p class="source">*Esta calculadora foi extraída de <a
+                    href="https://blogdomat.vercel.app/8-criando-uma-calculadora-com-html-css-javascript">Blog do
+                    Mat</a></p>
+        </h5> -->
+
+    </div>
+    <script type="text/javascript" src="calculadora.js"></script>
+</body>
+
+</html>
