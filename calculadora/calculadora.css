@@ -7,8 +7,7 @@
   }
   
   body {
-    background: #cfcfcf;
-    color: #111111;
+    background-color: rgb(75, 75, 95);
     font-size: 16px;
   
     /* FLEX */
@@ -19,24 +18,27 @@
   
   /* CALCULATOR CONTAINER */
   .calculator {
-    background-color: #2f2b39;
     border-radius: 2px;
-    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 3px 10px rgba(3, 16, 2, 0.6);
     padding: 15px 25px;
-    width: 250px;
-    margin-top: 10%;
+    width: 300px;
+    height: 500px;
+    margin-top: 7%;
+    background-color: rgb(108, 85, 85);
   }
   
   /* DISPLAY */
   .display {
-    margin: 50px 0 60px;
+    margin: 20px 0 50px;
+    padding: 20px 10px 10px 5px;
     text-align: right;
+    background-color: rgb(109, 172, 208);
   }
   
   .display input {
-    background: transparent;
+    background: rgba(120, 172, 222, 0.193);
     border: none;
-    color: #f2f2f2;
+    color: #ffffff;
     font-size: 40px;
     font-weight: 400;
     text-align: right;
@@ -44,7 +46,7 @@
   }
   
   .display h2 {
-    color: #6d53d6;
+    color: #181037;
     font-size: 15px;
     font-weight: 500;
     height: 18px;
@@ -59,24 +61,28 @@
   
   /* BUTTON */
   .button {
-    background-color: transparent;
-    border: none;
-    border-radius: 2px;
+    background-color:  rgba(118, 97, 97, 0.5);
+    border-color: #181037;
+    border-radius: 10px;
     color: #f2f2f2;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
     height: 50px;
     margin: 2px;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.15s linear;
     width: 50px;
   }
   
   .button:hover {
-    transform: scale(1.04);
+    transform: scale(1.1);
+    transition-delay: 30ms;
+    transition-timing-function: linear;
   }
   .button:active {
-    transform: scale(0.97);
+    transform: scale(0.8);
+    transition-delay: 20ms;
+    transition-timing-function: linear;
   }
   
   /* COLORS */
