@@ -19,37 +19,37 @@
         <!-- <BUTTONS -->
         <div class="row">
             <button class="button purple-text" onclick="limpar()">AC</button>
+            <button class="button purple-text" onclick="del()">DEL</button>
+            <button class="button gray" onclick="raiz()" id="add_raiz">²√</button>
             <div></div>
-            <div></div>
-            <button class="button gray" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(7)">7</button>
             <button class="button" onclick="add_numero(8)">8</button>
             <button class="button" onclick="add_numero(9)">9</button>
-            <button class="button gray" onclick="add_operador('*')">*</button>
+            <button class="button gray" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(4)">4</button>
             <button class="button" onclick="add_numero(5)">5</button>
             <button class="button" onclick="add_numero(6)">6</button>
-            <button class="button gray" onclick="add_operador('-')">-</button>
+            <button class="button gray" onclick="add_operador('*')">*</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(1)">1</button>
             <button class="button" onclick="add_numero(2)">2</button>
             <button class="button" onclick="add_numero(3)">3</button>
-            <button class="button gray" onclick="add_operador('+')">+</button>
+            <button class="button gray" onclick="add_operador('-')">-</button>
         </div>
 
         <div class="row">
-            <div></div>
-            <button class="button" onclick="add_numero(0)">0</button>
             <button class="button" onclick="add_numero('.')">.</button>
+            <button class="button" onclick="add_numero(0)">0</button>
             <button class="button purple" onclick="total()">=</button>
+            <button class="button gray" onclick="add_operador('+')">+</button>
         </div>
         <!-- BUTTONS/> -->
         <!-- <h5>
@@ -59,7 +59,7 @@
         </h5> -->
 
     </div>
-    <script type="text/javascript" src="calculadora.js"></script>
+    <script type="text/javascript" src="calculadoraBase.js"></script>
+    <script type="text/javascript" src="calculadoraAdd.js"></script>
 </body>
-
 </html>

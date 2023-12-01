@@ -1,14 +1,6 @@
-let result = document.getElementById("resultado");
-let resultado = 0;
-let operacao = "";
-let stop = false;
-let history = document.getElementById("history");
-
-function limpar() {
-  result.value = "";
-  history.innerHTML = "";
-  operacao = "";
-}
+const Add = document.createElement("script");
+Add.src = "calculadoraAdd.js";
+document.head.appendChild(Add)
 
 function add_numero(string) {
   if (!stop) {
@@ -56,29 +48,31 @@ function total() {
     switch (operacao) {
       case "+":
         resultado = Number(numeros[0]) + Number(numeros[1]);
-        result.value = Number(numeros[0]) + Number(numeros[1])
-        document.getElementById("history").innerHTML = Number(numeros[0]) + " + " + Number(numeros[1]) + " = " + resultado
+        result.value = Number(numeros[0]) + Number(numeros[1]);
+        document.getElementById("history").innerHTML = Number(numeros[0]) + " + " + Number(numeros[1]) + " = " + resultado;
         break;
 
       case "-":
         resultado = numeros[0] - numeros[1];
-        result.value = Number(numeros[0]) - Number(numeros[1])
-        document.getElementById("history").innerHTML = Number(numeros[0]) + " - " + Number(numeros[1]) + " = " + resultado
+        result.value = Number(numeros[0]) - Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " - " + Number(numeros[1]) + " = " + resultado;
         break;
 
       case "*":
         resultado = numeros[0] * numeros[1];
-        result.value = Number(numeros[0]) * Number(numeros[1])
-        document.getElementById("history").innerHTML = Number(numeros[0]) + " x " + Number(numeros[1]) + " = " + resultado
+        result.value = Number(numeros[0]) * Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " x " + Number(numeros[1]) + " = " + resultado;
         break;
 
       case "/":
         resultado = numeros[0] / numeros[1];
-        result.value = Number(numeros[0]) / Number(numeros[1])
-        document.getElementById("history").innerHTML = Number(numeros[0]) + " / " + Number(numeros[1]) + " = " + resultado
+        result.value = Number(numeros[0]) / Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " / " + Number(numeros[1]) + " = " + resultado;
         break;
     }
-
     stop = true;
   }
 }
