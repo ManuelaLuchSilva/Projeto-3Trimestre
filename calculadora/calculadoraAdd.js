@@ -33,9 +33,3 @@ function del() {
   result.value = NewResult;
 }
 
-function raiz() {
-  let num = resultado;
-  resultado = Math.sqrt(num);
-  result.value = Math.sqrt(num);
-  document.getElementById("history").innerHTML = "√" + num + " = " + resultado;
-}
