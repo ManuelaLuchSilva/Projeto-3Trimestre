@@ -21,7 +21,7 @@ function opEspecial() {
     let num2 = Number(prompt("Qual o segundo digito?").replace(",", "."));
     if (op == "^") {
       result = num1 ** num2;
-      alert(num1);
+      alert(num1 + "^" + num2 + "= " + result);
     } else {
       alert("Resposta invalida!");
     }
