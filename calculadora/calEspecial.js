@@ -5,7 +5,7 @@ function opEspecial() {
     "Qual a operação desejada? \n( !; ^; ²√'raiz')"
   ).toLowerCase();
 
-  let result = 1; 
+  let result = 1;
   if (op == "!") {
     if (num1 === 0 || num1 === 1) {
       alert(num1 + "!" + " = 1");
