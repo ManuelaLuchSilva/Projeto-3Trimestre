@@ -9,48 +9,46 @@
 </head>
 
 <body>
-    <!-- CALCULATOR -->
     <div class="calculator">
-        <!-- DISPLAY -->
+
         <div class="display">
             <input id="resultado" placeholder="0" disabled>
             <h2 id="history"></h2>
         </div>
 
-        <!-- <BUTTONS -->
         <div class="row">
-            <button class="button purple-text" onclick="limpar()">AC</button>
-            <button class="button purple-text" onclick="del()">DEL</button>
-            <button class="button gray" onclick="opEspecial()">°-°</button>
+            <button class="button clear" onclick="limpar()">AC</button>
+            <button class="button del" onclick="del()">DEL</button>
             <div></div>
+            <button class="button opXp" onclick="opEspecial()">°-°</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(7)">7</button>
             <button class="button" onclick="add_numero(8)">8</button>
             <button class="button" onclick="add_numero(9)">9</button>
-            <button class="button gray" onclick="add_operador('/')">/</button>
+            <button class="button op" onclick="add_operador('/')">/</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(4)">4</button>
             <button class="button" onclick="add_numero(5)">5</button>
             <button class="button" onclick="add_numero(6)">6</button>
-            <button class="button gray" onclick="add_operador('*')">*</button>
+            <button class="button op" onclick="add_operador('*')">*</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero(1)">1</button>
             <button class="button" onclick="add_numero(2)">2</button>
             <button class="button" onclick="add_numero(3)">3</button>
-            <button class="button gray" onclick="add_operador('-')">-</button>
+            <button class="button op" onclick="add_operador('-')">-</button>
         </div>
 
         <div class="row">
             <button class="button" onclick="add_numero('.')">.</button>
             <button class="button" onclick="add_numero(0)">0</button>
-            <button class="button purple" onclick="total()">=</button>
-            <button class="button gray" onclick="add_operador('+')">+</button>
+            <button class="button total" onclick="total()">=</button>
+            <button class="button op" onclick="add_operador('+')">+</button>
         </div>
         <!-- BUTTONS/> -->
         <!-- <h5>
@@ -59,8 +57,9 @@
                     Mat</a></p>
         </h5> -->
     </div>
-    <script type="text/javascript" src="calculadoraBase.js"></script>
-    <script type="text/javascript" src="calculadoraAdd.js"></script>
+    <script src="calculadoraBase.js"></script>
+    <script src="calculadoraAdd.js"></script>
+    <script src="calEspecial.js"></script>
 </body>
 
 </html>

@@ -10,21 +10,20 @@ body {
   background-color: rgb(75, 75, 95);
   font-size: 16px;
 
-  /* DEixa Flex */
+  /* Deixa Flex */
   display: flex;
   justify-content: center;
 }
 
 /* Calculadora */
 .calculator {
-  border-radius: 2px;
-  box-shadow: 10px 3px 10px rgba(3, 16, 2, 0.6);
-  padding: 15px 25px;
-  width: 300px;
-  height: 500px;
-  margin-top: 3%;
-  margin: 0 20%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 6px rgb(65, 54, 54, 0.9);
   background-color: rgb(108, 85, 85);
+  padding: 15px 25px;
+  max-width: 300px;
+  max-height: 500px;
+  margin: 3% 20%;
 }
 
 /* DISPLAY */
@@ -59,7 +58,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* BUTTON */
+/* num's & operações */
 .button {
   background-color: rgba(118, 97, 97, 0.5);
   border-color: #181037;
@@ -68,10 +67,10 @@ body {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+  width: 50px;
   height: 50px;
   margin: 2px;
   transition: all 0.15s linear;
-  width: 50px;
 }
 
 .button:hover {
@@ -86,17 +85,30 @@ body {
   transition-timing-function: linear;
 }
 
-/* COLORS */
-.gray {
+/* Cor buttons */
+.op {
   background-color: #eaeaea;
   color: #2f2d38;
 }
 
-.purple {
-  background-color: #7d5dfe;
+.total {
+  background-color: rgb(90, 121, 98);
   color: #f2f2f2;
 }
 
-.purple-text {
-  color: #7d5dfe;
+.clear {
+  color: rgb(172, 223, 223);
+  background-color: rgb(148, 42, 42);
+  border-color: #e48282;
+}
+
+.del{
+  color: rgb(172, 223, 223);
+  background-color: rgb(172, 90, 24);
+  border-color: rgb(221, 167, 135);
+}
+
+.opXp{
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2f2d38;
 }

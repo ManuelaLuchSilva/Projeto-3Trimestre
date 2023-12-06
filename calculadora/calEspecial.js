@@ -1,9 +1,7 @@
 function opEspecial() {
-  alert("Aqui esta mais opções de calculos:");
-  let num1 = Number(prompt("Qual o primeiro digito?").replace(",", "."));
-  let op = prompt(
-    "Qual a operação desejada? \n( !; ^; ²√'raiz')"
-  ).toLowerCase();
+  alert("Aqui vai mais opções de cálculos:");
+  let num1 = Number(prompt("Qual o primeiro dígito?").replace(",", "."));
+  let op = prompt("Qual a operação desejada? \n( !; ^; ²√'raiz')").toLowerCase();
 
   let result = 1;
   if (op == "!") {
@@ -18,12 +16,12 @@ function opEspecial() {
     let result = Math.sqrt(num1);
     alert("²√" + num1 + " = " + result);
   } else {
-    let num2 = Number(prompt("Qual o segundo digito?").replace(",", "."));
+    let num2 = Number(prompt("Qual o segundo dígito?").replace(",", "."));
     if (op == "^") {
       result = num1 ** num2;
       alert(num1 + "^" + num2 + "= " + result);
     } else {
-      alert("Resposta invalida!");
+      alert("Resposta inválida!");
     }
   }
 }
