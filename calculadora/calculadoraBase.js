@@ -74,18 +74,18 @@ function total() {
           Number(numeros[0]) + " / " + Number(numeros[1]) + " = " + resultado;
         break;
       case "√":
-        if (Number(numeros[0])!=0 && Number(numeros[0]) > 0) {
+        if (Number(numeros[0]) != 0 && Number(numeros[0]) > 0) {
           resultado = Math.sqrt(Number(numeros[0]));
-        result.value = Math.sqrt(Number(numeros[0]));
-        document.getElementById("history").innerHTML =
-          "√" + Number(numeros[0]) + " = " + resultado;
-        } else{
+          result.value = Math.sqrt(Number(numeros[0]));
+          document.getElementById("history").innerHTML =
+            "√" + Number(numeros[0]) + " = " + resultado;
+        } else {
           resultado = Math.sqrt(Number(numeros[1]));
-        result.value = Math.sqrt(Number(numeros[1]));
-        document.getElementById("history").innerHTML =
-          "√" + Number(numeros[1]) + " = " + resultado;
+          result.value = Math.sqrt(Number(numeros[1]));
+          document.getElementById("history").innerHTML =
+            "√" + Number(numeros[1]) + " = " + resultado;
         }
-        
+
         break;
     }
     stop = true;
