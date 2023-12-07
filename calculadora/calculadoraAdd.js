@@ -1,6 +1,6 @@
 const Base = document.createElement("script");
 Base.src = "calculadoraBase.js";
-document.head.appendChild(Base)
+document.head.appendChild(Base);
 
 let result = document.getElementById("resultado");
 let resultado = 0;
@@ -32,4 +32,19 @@ function del() {
   }
   result.value = NewResult;
 }
+
+document.addEventListener("keydown", function (num) {
+  if (num.key >= 0 && num.key <= 9) {
+    result.value = result.value + num.key;
+    history.innerHTML = result.value;
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/" || event.key === ",") {
+    if (event.key == "+") {
+      
+    }
+  }
+});
 
