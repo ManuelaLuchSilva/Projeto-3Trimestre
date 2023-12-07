@@ -12,17 +12,13 @@ function limpar() {
   result.value = "";
   history.innerHTML = "";
   operacao = "";
+  stop = false;
 }
 
 function del() {
   let ultimo = result.value.slice(-1);
   let NewResult;
-  if (
-    !isNaN(ultimo) ||
-    ultimo === "+" ||
-    ultimo === "-" ||
-    ultimo === "*" ||
-    ultimo === "/"
+  if ( !isNaN(ultimo) || ultimo === "+" || ultimo === "-" || ultimo === "*" || ultimo === "/"
   ) {
     NewResult = result.value.slice(0, -1);
   } else if (!isFinite(ultimo)) {
@@ -40,11 +36,68 @@ document.addEventListener("keydown", function (num) {
   }
 });
 
-document.addEventListener("keydown", function(event) {
-  if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/" || event.key === ",") {
-    if (event.key == "+") {
-      
-    }
+document.addEventListener("keypress", (e) => {
+  if (e.key == "*" || e.key == "/" || e.key == "+" || e.key == "-") {
+    total();
+    op = e.key;
+    operacao = op;
+    result.value = result.value + e.key;
+    history.innerHTML = result.value;
+    stop = false;
+  }
+  else if (e.key == ".") {
   }
 });
 
+document.addEventListener("keypress", function (enter) {
+  if (enter.key == 'Enter') {
+    let numeros = result.value.split(operacao);
+
+    if (numeros[1] == "") {
+      result.value = result.value + "0";
+      numeros[1] = 0;
+    }
+    
+
+    document.getElementById("history").innerHTML = result.value;
+
+    switch (operacao) {
+      case "+":
+        resultado = Number(numeros[0]) + Number(numeros[1]);
+        result.value = Number(numeros[0]) + Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " + " + Number(numeros[1]) + " = " + resultado;
+        break;
+
+      case "-":
+        resultado = numeros[0] - numeros[1];
+        result.value = Number(numeros[0]) - Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " - " + Number(numeros[1]) + " = " + resultado;
+        break;
+
+      case "*":
+        resultado = numeros[0] * numeros[1];
+        result.value = Number(numeros[0]) * Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " x " + Number(numeros[1]) + " = " + resultado;
+        break;
+
+      case "/":
+        resultado = numeros[0] / numeros[1];
+        result.value = Number(numeros[0]) / Number(numeros[1]);
+        document.getElementById("history").innerHTML =
+          Number(numeros[0]) + " / " + Number(numeros[1]) + " = " + resultado;
+        break;
+    }
+    stop = true;
+  }
+});
+
+document.addEventListener("keypress", function limpa() {
+  if (limpa.key == 'Backspace') {
+    result.value = "";
+    history.innerHTML = "";
+    operacao = "";
+  }
+});
