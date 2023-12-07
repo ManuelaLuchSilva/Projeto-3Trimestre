@@ -94,10 +94,3 @@ document.addEventListener("keypress", function (enter) {
   }
 });
 
-document.addEventListener("keypress", function limpa() {
-  if (limpa.key == 'Backspace') {
-    result.value = "";
-    history.innerHTML = "";
-    operacao = "";
-  }
-});
